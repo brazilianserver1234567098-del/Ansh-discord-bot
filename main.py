@@ -1,3 +1,4 @@
+import os 
 import discord
 from discord.ext import commands
 
@@ -131,4 +132,4 @@ async def report(ctx, member: discord.Member = None, *, reason: str = None):
     except Exception as e:
         await ctx.send(f"⚠️ DM fail: {e}")
 
-bot.run("MTU2Nzc5NzI4NjQ3MjI1NzU2Ng.Grtm_F.OKr3MJmkjeUtyI6lbv45fTIptKFqO3HcnFPtG8")
+bot.run(os.environ.get("DISCORD_TOKEN"))
